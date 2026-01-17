@@ -153,6 +153,10 @@
       maxFov: 90,
       zoomSpeed: 0.5,
       fisheye: false,
+      // Enable touch inertia (kinetic/momentum scrolling) for smoother panorama navigation on touch devices.
+      // A swipe will continue to rotate the panorama briefly after the finger is lifted.
+      // Value of 0.8 provides a natural feel similar to Google Street View.
+      moveInertia: 0.8,
     });
     const resolutionPlugin = viewer.getPlugin<ResolutionPlugin>(ResolutionPlugin);
     const zoomHandler = ({ zoomLevel }: events.ZoomUpdatedEvent) => {
